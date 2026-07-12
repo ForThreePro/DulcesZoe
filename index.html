@@ -29,8 +29,16 @@
     .form-group { margin-bottom: 15px; }
     .form-group label { display: block; font-weight: bold; margin-bottom: 5px; color: #8b4513; }
     .form-group input, .form-group select { width: 100%; padding: 12px; border: 2px solid #fff0e0; border-radius: 10px; font-size: 1em; }
-    .btn-enviar { background: #25D366; color: white; padding: 15px; border: none; border-radius: 12px; width: 100%; font-size: 1.1em; font-weight: bold; cursor: pointer; transition: 0.3s; }
-    .btn-enviar:hover { background: #1ebe5a; transform: scale(1.02); }
+    .btn-enviar { background: #25D366; color: white; padding: 15px; border: none; border-radius: 12px; width: 100%; font-size: 1.1em; font-weight: bold; cursor: pointer; }
+    .btn-enviar:hover { background: #1ebe5a; }
+    
+    /* PUNTOS DE ENTREGA */
+    .puntos-entrega { background: #fff0e0; padding: 30px; border-radius: 20px; margin: 40px 0; border: 3px dashed #d2691e; }
+    .puntos-entrega h2 { color: #8b4513; text-align: center; margin-bottom: 20px; }
+    .puntos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+    .punto { background: white; padding: 15px; border-radius: 12px; display: flex; align-items: center; gap: 10px; }
+    .punto .emoji { font-size: 1.8em; }
+    .badge-gratis { background: #25D366; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.8em; font-weight: bold; }
     
     .beneficios { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin: 50px 0; }
     .beneficio { text-align: center; background: white; padding: 30px 20px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
@@ -45,7 +53,7 @@
 </head>
 <body>
 
-  <div class="banner-envio">🚚 Costo de envío depende del lugar - Llena el formulario y te cotizamos</div>
+  <div class="banner-envio">🚚 Delivery a domicilio con costo según zona | 📍 Recojo en puntos fijos GRATIS</div>
 
   <header>
     <h1>🍫 Dulce Zoe</h1>
@@ -78,9 +86,45 @@
       </div>
     </div>
 
+    <!-- PUNTOS DE ENTREGA GRATIS -->
+    <div class="puntos-entrega">
+      <h2>📍 Puntos de Entrega GRATIS</h2>
+      <p style="text-align:center; margin-bottom:20px;">Coordinamos hora por WhatsApp. Sin costo de envío</p>
+      <div class="puntos-grid">
+        <div class="punto">
+          <span class="emoji">🏛️</span>
+          <div>
+            <b>Plaza de Armas de Ica</b><br>
+            <span class="badge-gratis">ENVÍO GRATIS</span>
+          </div>
+        </div>
+        <div class="punto">
+          <span class="emoji">⚓</span>
+          <div>
+            <b>Plaza Miguel Grau - Parcona</b><br>
+            <span class="badge-gratis">ENVÍO GRATIS</span>
+          </div>
+        </div>
+        <div class="punto">
+          <span class="emoji">🛒</span>
+          <div>
+            <b>Precio Uno - La Tinguiña</b><br>
+            <span class="badge-gratis">ENVÍO GRATIS</span>
+          </div>
+        </div>
+        <div class="punto">
+          <span class="emoji">⛲</span>
+          <div>
+            <b>Plazuela de Los Aquijes</b><br>
+            <span class="badge-gratis">ENVÍO GRATIS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- FORMULARIO PARA ENVIAR UBICACIÓN -->
     <div class="formulario-pedido">
-      <h2>📍 Haz tu pedido y cotiza tu envío</h2>
+      <h2>📱 Haz tu pedido</h2>
       <form id="formPedido">
         <div class="form-group">
           <label>¿Qué deseas pedir?</label>
@@ -94,40 +138,48 @@
         </div>
         
         <div class="form-group">
-          <label>Tu Nombre</label>
-          <input type="text" id="nombre" placeholder="Ej: Maria Lopez" required>
+          <label>¿Cómo deseas recibirlo?</label>
+          <select id="tipoEntrega" required>
+            <option value="">Selecciona</option>
+            <option value="Recojo en Punto Fijo GRATIS">Recojo en Punto Fijo - GRATIS</option>
+            <option value="Delivery a Domicilio">Delivery a Domicilio - Costo según zona</option>
+          </select>
         </div>
 
         <div class="form-group">
-          <label>Distrito</label>
-          <input type="text" id="distrito" placeholder="Ej: Ica, La Tinguiña, Parcona" required>
+          <label>Si eliges "Punto Fijo", ¿Cuál?</label>
+          <select id="puntoFijo">
+            <option value="No aplica">No aplica</option>
+            <option value="Plaza de Armas Ica">Plaza de Armas Ica</option>
+            <option value="Plaza Miguel Grau Parcona">Plaza Miguel Grau Parcona</option>
+            <option value="Precio Uno Tinguiña">Precio Uno Tinguiña</option>
+            <option value="Plazuela Los Aquijes">Plazuela Los Aquijes</option>
+          </select>
         </div>
 
         <div class="form-group">
-          <label>Dirección completa</label>
-          <input type="text" id="direccion" placeholder="Ej: Av. San Martin 123, Ref: Frente al parque" required>
+          <label>Si es Delivery: Distrito y Dirección</label>
+          <input type="text" id="direccion" placeholder="Ej: La Tinguiña, Av. San Martin 123">
         </div>
 
         <div class="form-group">
-          <label>Tu Celular</label>
-          <input type="number" id="celular" placeholder="Ej: 916518153" required>
+          <label>Tu Nombre y Celular</label>
+          <input type="text" id="datos" placeholder="Ej: Maria Lopez - 916518153" required>
         </div>
 
         <button type="submit" class="btn-enviar">📱 Enviar pedido por WhatsApp</button>
       </form>
     </div>
 
-    <h2 style="text-align:center; margin:60px 0 30px; color:#8b4513;">¿Por qué elegir Dulce Zoe?</h2>
     <div class="beneficios">
       <div class="beneficio"><div class="icono">🍫</div><h4>100% Artesanal</h4><p>Hechas a mano con amor.</p></div>
-      <div class="beneficio"><div class="icono">⚡</div><h4>Entrega Rápida</h4><p>Envíos el mismo día. Costo según zona.</p></div>
-      <div class="beneficio"><div class="icono">❤️</div><h4>Ingredientes Premium</h4><p>La mejor calidad para ti.</p></div>
+      <div class="beneficio"><div class="icono">⚡</div><h4>Entrega Rápida</h4><p>Mismo día en Ica.</p></div>
+      <div class="beneficio"><div class="icono">❤️</div><h4>Ingredientes Premium</h4><p>La mejor calidad.</p></div>
     </div>
 
     <div class="info-box">
       <h2>🕐 Horario de Atención</h2>
       <p><b>Lunes a Domingo:</b> 9:00am - 8:00pm</p>
-      <p><b>📍 Entregas:</b> Todo Ica - Costo según zona</p>
       <p><b>💳 Pagos:</b> Yape, Plin y Efectivo</p>
     </div>
 
@@ -145,12 +197,12 @@
       e.preventDefault();
       
       let producto = document.getElementById('producto').value;
-      let nombre = document.getElementById('nombre').value;
-      let distrito = document.getElementById('distrito').value;
+      let tipoEntrega = document.getElementById('tipoEntrega').value;
+      let puntoFijo = document.getElementById('puntoFijo').value;
       let direccion = document.getElementById('direccion').value;
-      let celular = document.getElementById('celular').value;
+      let datos = document.getElementById('datos').value;
       
-      let mensaje = `Hola Dulce Zoe 🍫%0A%0AQuiero hacer un pedido:%0A*Producto:* ${producto}%0A*Nombre:* ${nombre}%0A*Distrito:* ${distrito}%0A*Dirección:* ${direccion}%0A*Celular:* ${celular}%0A%0A¿Me puedes indicar el costo de envío por favor?`;
+      let mensaje = `Hola Dulce Zoe 🍫%0A%0A*PEDIDO*%0AProducto: ${producto}%0ATipo de Entrega: ${tipoEntrega}%0APunto de Recojo: ${puntoFijo}%0ADirección Delivery: ${direccion}%0ADatos: ${datos}%0A%0AQuedo atento para coordinar hora y pago ❤️`;
       
       let url = `https://wa.me/51916518153?text=${mensaje}`;
       window.open(url, '_blank');
