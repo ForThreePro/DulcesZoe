@@ -16,27 +16,25 @@
     .productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
     .card { background: white; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s; }
     .card:hover { transform: translateY(-5px); }
-    .card img { width: 100%; height: 220px; object-fit: cover; }
+    .card img { width: 100%; height: 250px; object-fit: cover; }
     .card-content { padding: 20px; }
     .card-content h3 { color: #8b4513; font-size: 1.5em; margin-bottom: 10px; }
     .precios { margin: 15px 0; }
-    .precio { background: #fff0e0; padding: 10px; border-radius: 10px; margin: 8px 0; display: flex; justify-content: space-between; font-weight: bold; }
+    .precio { background: #fff0e0; padding: 12px; border-radius: 10px; margin: 8px 0; display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1em; }
     
     .btn-whatsapp { 
       display: block; text-align: center; background: #25D366; color: white; 
       padding: 15px; border-radius: 15px; text-decoration: none; font-weight: bold; 
       font-size: 1.1em; margin-top: 15px; transition: 0.3s;
     }
-    .btn-whatsapp:hover { background: #1ebe5a; }
+    .btn-whatsapp:hover { background: #1ebe5a; transform: scale(1.02); }
     
     footer { background: #4a2c2a; color: white; text-align: center; padding: 30px 20px; margin-top: 40px; }
     
     .galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
     .galeria img { width: 100%; height: 200px; object-fit: cover; border-radius: 15px; }
     
-    @media (max-width: 600px) {
-      header h1 { font-size: 2em; }
-    }
+    .badge { background: #d2691e; color: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8em; }
   </style>
 </head>
 <body>
@@ -52,38 +50,38 @@
     
     <div class="productos">
       
-      <!-- Producto 1 -->
+      <!-- Producto 1: Clasicas -->
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&w=800" alt="Chocotejas Clasicas">
+        <img src="https://files.evogb.win/9UDDPZ.jpg" alt="Chocotejas Clasicas Dulce Zoe">
         <div class="card-content">
-          <h3>Chocotejas Clásicas</h3>
-          <p>El sabor tradicional que todos aman. Rellenas de manjar y cubiertas de chocolate.</p>
+          <h3>Chocotejas Clásicas <span class="badge">Más Vendidas</span></h3>
+          <p>El sabor tradicional que todos aman. Rellenas de manjar blanco y cubiertas con el mejor chocolate.</p>
           <div class="precios">
             <div class="precio">
-              <span>6 Unidades</span>
+              <span>📦 6 Unidades</span>
               <span>S/ 8.00</span>
             </div>
             <div class="precio">
-              <span>12 Unidades</span>
+              <span>📦 12 Unidades</span>
               <span>S/ 15.00</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Producto 2 -->
+      <!-- Producto 2: Con Chinchin -->
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800" alt="Chocotejas con Chinchin">
+        <img src="https://files.evogb.win/Jp0isV.jpg" alt="Chocotejas con Chinchin Dulce Zoe">
         <div class="card-content">
-          <h3>Chocotejas con Chinchín</h3>
-          <p>Lo mejor de ambos mundos. Crujiente chinchín + chocolate + manjar.</p>
+          <h3>Chocotejas con Chinchín <span class="badge">Nuevo</span></h3>
+          <p>Lo mejor de ambos mundos. Crujiente chinchín + manjar + chocolate. ¡Una explosión de sabor!</p>
           <div class="precios">
             <div class="precio">
-              <span>6 Unidades</span>
+              <span>📦 6 Unidades</span>
               <span>S/ 8.50</span>
             </div>
             <div class="precio">
-              <span>12 Unidades</span>
+              <span>📦 12 Unidades</span>
               <span>S/ 15.50</span>
             </div>
           </div>
@@ -92,16 +90,16 @@
 
     </div>
 
-    <h2 style="text-align:center; margin:50px 0 20px; color:#8b4513;">Galería</h2>
+    <h2 style="text-align:center; margin:50px 0 20px; color:#8b4513;">Galería Dulce Zoe</h2>
     <div class="galeria">
-      <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?q=80&w=800" alt="Chocotejas">
-      <img src="https://images.unsplash.com/photo-1606312619070-2d48b4c652b4?q=80&w=800" alt="Chocolate">
-      <img src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?q=80&w=800" alt="Dulces">
+      <img src="https://files.evogb.win/9UDDPZ.jpg" alt="Chocotejas Clasicas">
+      <img src="https://files.evogb.win/Jp0isV.jpg" alt="Chocotejas con Chinchin">
+      <img src="https://files.evogb.win/9UDDPZ.jpg" alt="Chocotejas">
     </div>
 
-    <div style="text-align:center; margin-top:50px;">
-      <h2 style="color:#8b4513; margin-bottom:15px;">Haz tu pedido</h2>
-      <p>Envíos a todo Ica. Pagos por Yape, Plin o Efectivo</p>
+    <div style="text-align:center; margin-top:50px; background:white; padding:30px; border-radius:20px;">
+      <h2 style="color:#8b4513; margin-bottom:15px;">📱 Haz tu pedido</h2>
+      <p style="margin-bottom:20px;">Envíos a todo Ica. Aceptamos Yape, Plin y Efectivo</p>
       <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20hacer%20un%20pedido%20de%20chocotejas" target="_blank" class="btn-whatsapp">
         📱 Pedir por WhatsApp
       </a>
