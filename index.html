@@ -23,6 +23,7 @@
     .precio-box { background: #fff0e0; padding: 12px 15px; border-radius: 12px; margin: 10px 0; }
     .precio { display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1em; }
     .btn-pedir { background: #25D366; color: white; padding: 12px; border-radius: 12px; text-decoration: none; display: block; text-align: center; margin-top: 8px; font-weight: bold; }
+    .nota { font-size: 0.9em; color: #8b4513; text-align: center; margin-top: 10px; font-style: italic; }
     
     .formulario-pedido { background: white; padding: 30px; border-radius: 20px; margin: 50px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
     .formulario-pedido h2 { color: #8b4513; text-align: center; margin-bottom: 20px; }
@@ -30,15 +31,14 @@
     .form-group label { display: block; font-weight: bold; margin-bottom: 5px; color: #8b4513; }
     .form-group input, .form-group select { width: 100%; padding: 12px; border: 2px solid #fff0e0; border-radius: 10px; font-size: 1em; }
     .btn-enviar { background: #25D366; color: white; padding: 15px; border: none; border-radius: 12px; width: 100%; font-size: 1.1em; font-weight: bold; cursor: pointer; }
-    .btn-enviar:hover { background: #1ebe5a; }
     
-    /* PUNTOS DE ENTREGA */
     .puntos-entrega { background: #fff0e0; padding: 30px; border-radius: 20px; margin: 40px 0; border: 3px dashed #d2691e; }
-    .puntos-entrega h2 { color: #8b4513; text-align: center; margin-bottom: 20px; }
+    .puntos-entrega h2 { color: #8b4513; text-align: center; margin-bottom: 10px; }
+    .subtitulo { text-align: center; margin-bottom: 20px; color: #8b4513; }
     .puntos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
     .punto { background: white; padding: 15px; border-radius: 12px; display: flex; align-items: center; gap: 10px; }
     .punto .emoji { font-size: 1.8em; }
-    .badge-gratis { background: #25D366; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.8em; font-weight: bold; }
+    .badge-envio { background: #d2691e; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.8em; font-weight: bold; }
     
     .beneficios { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin: 50px 0; }
     .beneficio { text-align: center; background: white; padding: 30px 20px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
@@ -53,7 +53,7 @@
 </head>
 <body>
 
-  <div class="banner-envio">🚚 Delivery a domicilio con costo según zona | 📍 Recojo en puntos fijos GRATIS</div>
+  <div class="banner-envio">🚚 Delivery a domicilio con costo según zona | 📍 Recojo en puntos: S/4.00</div>
 
   <header>
     <h1>🍫 Dulce Zoe</h1>
@@ -72,6 +72,7 @@
           <p>Rellenas de manjar blanco y cubiertas con chocolate premium.</p>
           <div class="precio-box"><div class="precio"><span>📦 6 Unidades</span><span>S/ 8.00</span></div></div>
           <div class="precio-box"><div class="precio"><span>📦 12 Unidades</span><span>S/ 15.00</span></div></div>
+          <p class="nota">Nota: Otras cantidades de chocotejas al WhatsApp 📱</p>
         </div>
       </div>
 
@@ -82,47 +83,48 @@
           <p>Crujiente chinchín + manjar + chocolate. ¡Explosión de sabor!</p>
           <div class="precio-box"><div class="precio"><span>📦 6 Unidades</span><span>S/ 8.50</span></div></div>
           <div class="precio-box"><div class="precio"><span>📦 12 Unidades</span><span>S/ 15.50</span></div></div>
+          <p class="nota">Nota: Otras cantidades de chocotejas al WhatsApp 📱</p>
         </div>
       </div>
     </div>
 
-    <!-- PUNTOS DE ENTREGA GRATIS -->
+    <!-- PUNTOS DE ENTREGA CON COSTO -->
     <div class="puntos-entrega">
-      <h2>📍 Puntos de Entrega GRATIS</h2>
-      <p style="text-align:center; margin-bottom:20px;">Coordinamos hora por WhatsApp. Sin costo de envío</p>
+      <h2>📍 Puntos de Entrega</h2>
+      <p class="subtitulo">Coordinamos hora por WhatsApp | <b>Envío S/4.00</b></p>
       <div class="puntos-grid">
         <div class="punto">
           <span class="emoji">🏛️</span>
           <div>
             <b>Plaza de Armas de Ica</b><br>
-            <span class="badge-gratis">ENVÍO GRATIS</span>
+            <span class="badge-envio">ENVÍO S/4.00</span>
           </div>
         </div>
         <div class="punto">
           <span class="emoji">⚓</span>
           <div>
             <b>Plaza Miguel Grau - Parcona</b><br>
-            <span class="badge-gratis">ENVÍO GRATIS</span>
+            <span class="badge-envio">ENVÍO S/4.00</span>
           </div>
         </div>
         <div class="punto">
           <span class="emoji">🛒</span>
           <div>
             <b>Precio Uno - La Tinguiña</b><br>
-            <span class="badge-gratis">ENVÍO GRATIS</span>
+            <span class="badge-envio">ENVÍO S/4.00</span>
           </div>
         </div>
         <div class="punto">
           <span class="emoji">⛲</span>
           <div>
             <b>Plazuela de Los Aquijes</b><br>
-            <span class="badge-gratis">ENVÍO GRATIS</span>
+            <span class="badge-envio">ENVÍO S/4.00</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- FORMULARIO PARA ENVIAR UBICACIÓN -->
+    <!-- FORMULARIO -->
     <div class="formulario-pedido">
       <h2>📱 Haz tu pedido</h2>
       <form id="formPedido">
@@ -134,6 +136,7 @@
             <option value="12 Chocotejas Clasicas S/15.00">12 Chocotejas Clásicas - S/15.00</option>
             <option value="6 Chocotejas con Chinchin S/8.50">6 Chocotejas con Chinchín - S/8.50</option>
             <option value="12 Chocotejas con Chinchin S/15.50">12 Chocotejas con Chinchín - S/15.50</option>
+            <option value="Otras cantidades - Consultar por WhatsApp">Otras cantidades - Consultar por WhatsApp</option>
           </select>
         </div>
         
@@ -141,7 +144,7 @@
           <label>¿Cómo deseas recibirlo?</label>
           <select id="tipoEntrega" required>
             <option value="">Selecciona</option>
-            <option value="Recojo en Punto Fijo GRATIS">Recojo en Punto Fijo - GRATIS</option>
+            <option value="Recojo en Punto Fijo S/4.00">Recojo en Punto Fijo - S/4.00</option>
             <option value="Delivery a Domicilio">Delivery a Domicilio - Costo según zona</option>
           </select>
         </div>
@@ -185,7 +188,7 @@
 
   </div>
 
-  <a href="https://wa.me/51916518153" target="_blank" class="btn-whatsapp-float">📱 WhatsApp</a>
+  <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20consultar%20por%20otras%20cantidades%20de%20chocotejas" target="_blank" class="btn-whatsapp-float">📱 WhatsApp</a>
 
   <footer>
     <p>🍫 <b>Dulce Zoe</b> - Chocotejas Artesanales</p>
