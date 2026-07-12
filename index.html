@@ -8,13 +8,13 @@
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
     body { background: #fff8f0; color: #4a2c2a; }
     
+    .banner-envio { background: #d2691e; color: white; text-align: center; padding: 12px; font-weight: bold; font-size: 1em; }
+    
     header { background: linear-gradient(135deg, #8b4513, #d2691e); color: white; text-align: center; padding: 50px 20px; }
     header h1 { font-size: 3em; margin-bottom: 10px; }
-    header p { font-size: 1.2em; }
     
     .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
     
-    /* 4. BOTONES POR PRODUCTO */
     .productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
     .card { background: white; border-radius: 20px; box-shadow: 0 5px 20px rgba(139,69,19,0.15); overflow: hidden; transition: transform 0.3s; }
     .card:hover { transform: translateY(-8px); }
@@ -23,31 +23,18 @@
     .card-content h3 { color: #8b4513; font-size: 1.6em; margin-bottom: 10px; }
     .precio-box { background: #fff0e0; padding: 12px 15px; border-radius: 12px; margin: 10px 0; }
     .precio { display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1em; }
-    .btn-pedir { 
-      background: #25D366; color: white; padding: 12px; border-radius: 12px; 
-      text-decoration: none; display: block; text-align: center; margin-top: 8px; 
-      font-weight: bold; transition: 0.3s;
-    }
+    .btn-pedir { background: #25D366; color: white; padding: 12px; border-radius: 12px; text-decoration: none; display: block; text-align: center; margin-top: 8px; font-weight: bold; transition: 0.3s; }
     .btn-pedir:hover { background: #1ebe5a; transform: scale(1.03); }
     
-    /* 2. POR QUE ELEGIRNOS */
     .beneficios { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin: 50px 0; }
-    .beneficio { text-align: center; background: white; padding: 30px 20px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: 0.3s; }
-    .beneficio:hover { transform: translateY(-5px); }
+    .beneficio { text-align: center; background: white; padding: 30px 20px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
     .beneficio .icono { font-size: 3em; margin-bottom: 10px; }
     .beneficio h4 { color: #8b4513; margin-bottom: 8px; font-size: 1.2em; }
     
-    /* 6. HORARIO */
     .info-box { background: white; padding: 30px; border-radius: 20px; text-align: center; margin: 40px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
     .info-box h2 { color: #8b4513; margin-bottom: 15px; }
     
-    /* 7. WHATSAPP FLOTANTE */
-    .btn-whatsapp-float { 
-      position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white; 
-      padding: 16px 22px; border-radius: 50px; text-decoration: none; font-weight: bold; 
-      box-shadow: 0 6px 15px rgba(37,211,102,0.4); z-index: 999; display: flex; align-items: center; gap: 8px;
-      animation: pulse 2s infinite;
-    }
+    .btn-whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white; padding: 16px 22px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 6px 15px rgba(37,211,102,0.4); z-index: 999; animation: pulse 2s infinite; }
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(37,211,102, 0.7); }
       70% { box-shadow: 0 0 0 15px rgba(37,211,102, 0); }
@@ -58,6 +45,8 @@
   </style>
 </head>
 <body>
+
+  <div class="banner-envio">🚚 Costo de envío depende del lugar - Consulta por WhatsApp</div>
 
   <header>
     <h1>🍫 Dulce Zoe</h1>
@@ -70,85 +59,75 @@
     
     <div class="productos">
       
-      <!-- Producto 1 -->
       <div class="card">
-        <img src="https://files.evogb.win/9UDDPZ.jpg" alt="Chocotejas Clasicas Dulce Zoe">
+        <img src="https://files.evogb.win/9UDDPZ.jpg" alt="Chocotejas Clasicas">
         <div class="card-content">
           <h3>Chocotejas Clásicas</h3>
-          <p>El sabor tradicional. Rellenas de manjar blanco y cubiertas con chocolate premium.</p>
-          
+          <p>Rellenas de manjar blanco y cubiertas con chocolate premium.</p>
           <div class="precio-box">
             <div class="precio"><span>📦 6 Unidades</span><span>S/ 8.00</span></div>
-            <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20pedir%206%20Chocotejas%20Clasicas%20por%20S/8.00" target="_blank" class="btn-pedir">Pedir 6 unidades</a>
+            <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%206%20Chocotejas%20Clasicas%20S/8.00.%20Mi%20direccion%20es:" target="_blank" class="btn-pedir">Pedir 6 unidades</a>
           </div>
-          
           <div class="precio-box">
             <div class="precio"><span>📦 12 Unidades</span><span>S/ 15.00</span></div>
-            <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20pedir%2012%20Chocotejas%20Clasicas%20por%20S/15.00" target="_blank" class="btn-pedir">Pedir 12 unidades</a>
+            <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%2012%20Chocotejas%20Clasicas%20S/15.00.%20Mi%20direccion%20es:" target="_blank" class="btn-pedir">Pedir 12 unidades</a>
           </div>
         </div>
       </div>
 
-      <!-- Producto 2 -->
       <div class="card">
-        <img src="https://files.evogb.win/Jp0isV.jpg" alt="Chocotejas con Chinchin Dulce Zoe">
+        <img src="https://files.evogb.win/Jp0isV.jpg" alt="Chocotejas con Chinchin">
         <div class="card-content">
           <h3>Chocotejas con Chinchín</h3>
-          <p>Crujiente chinchín + manjar + chocolate. ¡Una explosión de sabor!</p>
-          
+          <p>Crujiente chinchín + manjar + chocolate. ¡Explosión de sabor!</p>
           <div class="precio-box">
             <div class="precio"><span>📦 6 Unidades</span><span>S/ 8.50</span></div>
-            <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20pedir%206%20Chocotejas%20con%20Chinchin%20por%20S/8.50" target="_blank" class="btn-pedir">Pedir 6 unidades</a>
+            <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%206%20Chocotejas%20con%20Chinchin%20S/8.50.%20Mi%20direccion%20es:" target="_blank" class="btn-pedir">Pedir 6 unidades</a>
           </div>
-          
           <div class="precio-box">
             <div class="precio"><span>📦 12 Unidades</span><span>S/ 15.50</span></div>
-            <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20pedir%2012%20Chocotejas%20con%20Chinchin%20por%20S/15.50" target="_blank" class="btn-pedir">Pedir 12 unidades</a>
+            <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%2012%20Chocotejas%20con%20Chinchin%20S/15.50.%20Mi%20direccion%20es:" target="_blank" class="btn-pedir">Pedir 12 unidades</a>
           </div>
         </div>
       </div>
 
     </div>
 
-    <!-- 2. POR QUE ELEGIRNOS -->
     <h2 style="text-align:center; margin:60px 0 30px; color:#8b4513;">¿Por qué elegir Dulce Zoe?</h2>
     <div class="beneficios">
       <div class="beneficio">
         <div class="icono">🍫</div>
         <h4>100% Artesanal</h4>
-        <p>Cada chocoteja es hecha a mano con mucho amor y los mejores ingredientes.</p>
+        <p>Hechas a mano con amor y los mejores ingredientes.</p>
       </div>
       <div class="beneficio">
         <div class="icono">⚡</div>
         <h4>Entrega Rápida</h4>
-        <p>Te llevamos tu pedido el mismo día en toda Ica. Frescas y deliciosas.</p>
+        <p>Envíos el mismo día. Costo según tu distrito.</p>
       </div>
       <div class="beneficio">
         <div class="icono">❤️</div>
         <h4>Ingredientes Premium</h4>
-        <p>Usamos chocolate y manjar de la mejor calidad para ti y tu familia.</p>
+        <p>Chocolate y manjar de la mejor calidad.</p>
       </div>
     </div>
 
-    <!-- 6. HORARIO -->
     <div class="info-box">
       <h2>🕐 Horario de Atención</h2>
       <p><b>Lunes a Domingo:</b> 9:00am - 8:00pm</p>
-      <p><b>📍 Entregas:</b> Todo Ica</p>
+      <p><b>📍 Entregas:</b> Todo Ica - Costo según zona</p>
       <p><b>💳 Pagos:</b> Yape, Plin y Efectivo</p>
     </div>
 
   </div>
 
-  <!-- 7. WHATSAPP FLOTANTE -->
-  <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20hacer%20un%20pedido" target="_blank" class="btn-whatsapp-float">
-    📱 WhatsApp
+  <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20cotizar%20envio%20a%20mi%20direccion" target="_blank" class="btn-whatsapp-float">
+    📱 Consultar Envío
   </a>
 
   <footer>
     <p>🍫 <b>Dulce Zoe</b> - Chocotejas Artesanales</p>
     <p>WhatsApp: 916 518 153</p>
-    <p>© 2026 Dulce Zoe. Hecho con mucho amor y chocolate ❤️</p>
   </footer>
 
 </body>
