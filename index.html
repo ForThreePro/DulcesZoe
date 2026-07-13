@@ -25,6 +25,23 @@
     .btn-pedir { background: #25D366; color: white; padding: 12px; border-radius: 12px; text-decoration: none; display: block; text-align: center; margin-top: 8px; font-weight: bold; }
     .nota { font-size: 0.9em; color: #8b4513; text-align: center; margin-top: 10px; font-style: italic; }
     
+    .combos { background: linear-gradient(135deg, #8b4513, #d2691e); padding: 40px 30px; border-radius: 20px; margin: 50px 0; color: white; }
+    .combos h2 { text-align: center; font-size: 2em; margin-bottom: 10px; }
+    .combos p.sub { text-align: center; margin-bottom: 30px; }
+    .combo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .combo-card { background: white; color: #4a2c2a; padding: 25px; border-radius: 15px; text-align: center; position: relative; }
+    .badge-ahorro { position: absolute; top: -10px; right: -10px; background: #ff0000; color: white; padding: 8px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9em; }
+    .combo-card h3 { color: #8b4513; font-size: 1.4em; margin-bottom: 10px; }
+    .combo-precio { font-size: 2em; color: #25D366; font-weight: bold; margin: 10px 0; }
+    .combo-precio span { font-size: 0.6em; color: #999; text-decoration: line-through; }
+    
+    /* ACLARACIONES */
+    .aclaraciones { background: #fff3cd; border: 2px solid #ffc107; padding: 30px; border-radius: 20px; margin: 40px 0; }
+    .aclaraciones h2 { color: #856404; text-align: center; margin-bottom: 20px; }
+    .aclaraciones ul { list-style: none; padding: 0; }
+    .aclaraciones li { background: white; padding: 15px; margin-bottom: 12px; border-radius: 10px; border-left: 5px solid #ffc107; display: flex; gap: 10px; }
+    .aclaraciones li b { color: #8b4513; }
+    
     .formulario-pedido { background: white; padding: 30px; border-radius: 20px; margin: 50px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
     .formulario-pedido h2 { color: #8b4513; text-align: center; margin-bottom: 20px; }
     .form-group { margin-bottom: 15px; }
@@ -37,14 +54,7 @@
     .subtitulo { text-align: center; margin-bottom: 20px; color: #8b4513; }
     .puntos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
     .punto { background: white; padding: 15px; border-radius: 12px; display: flex; align-items: center; gap: 10px; }
-    .punto .emoji { font-size: 1.8em; }
     .badge-envio { background: #d2691e; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.8em; font-weight: bold; }
-    
-    .beneficios { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin: 50px 0; }
-    .beneficio { text-align: center; background: white; padding: 30px 20px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
-    .beneficio .icono { font-size: 3em; margin-bottom: 10px; }
-    
-    .info-box { background: white; padding: 30px; border-radius: 20px; text-align: center; margin: 40px 0; }
     
     .btn-whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white; padding: 16px 22px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 6px 15px rgba(37,211,102,0.4); z-index: 999; }
     
@@ -88,39 +98,70 @@
       </div>
     </div>
 
-    <!-- PUNTOS DE ENTREGA CON COSTO -->
+    <!-- SECCION COMBOS -->
+    <div class="combos">
+      <h2>🎁 COMBOS AHORRA</h2>
+      <p class="sub">Mezcla y disfruta más por menos</p>
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="badge-ahorro">AHORRA S/1.50</div>
+          <h3>Combo Familiar</h3>
+          <p>12 Clásicas + 6 Chinchín</p>
+          <p>18 chocotejas en total</p>
+          <div class="combo-precio">S/ 22.00 <span>Antes S/23.50</span></div>
+          <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20el%20Combo%20Familiar%20S/22.00" target="_blank" class="btn-pedir">Pedir Combo</a>
+        </div>
+        <div class="combo-card">
+          <div class="badge-ahorro">IDEAL REGALO</div>
+          <h3>Combo Dulce</h3>
+          <p>24 Clásicas</p>
+          <p>En caja + moño incluido</p>
+          <div class="combo-precio">S/ 28.00 <span>Antes S/30.00</span></div>
+          <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20el%20Combo%20Dulce%20S/28.00" target="_blank" class="btn-pedir">Pedir Combo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACLARACIONES IMPORTANTES -->
+    <div class="aclaraciones">
+      <h2>⚠️ Aclaraciones Importantes</h2>
+      <ul>
+        <li>
+          <span>📦</span>
+          <div><b>Pedidos:</b> Realizar pedidos con mínimo 2 horas de anticipación. Para combos grandes, con 1 día de anticipación.</div>
+        </li>
+        <li>
+          <span>💳</span>
+          <div><b>Pagos:</b> Aceptamos Yape, Plin y Efectivo. El pago se confirma al momento de coordinar el pedido.</div>
+        </li>
+        <li>
+          <span>🚚</span>
+          <div><b>Envíos:</b> Delivery a domicilio con costo según zona. En puntos de recojo el envío es S/4.00 fijo.</div>
+        </li>
+        <li>
+          <span>🕐</span>
+          <div><b>Horario de Entrega:</b> Lunes a Domingo de 9:00am a 8:00pm. Fuera de horario consultar por WhatsApp.</div>
+        </li>
+        <li>
+          <span>🍫</span>
+          <div><b>Producto Artesanal:</b> Al ser 100% artesanal, el peso y tamaño puede variar ligeramente.</div>
+        </li>
+        <li>
+          <span>❌</span>
+          <div><b>Cambios y Devoluciones:</b> Por ser productos perecibles no se aceptan cambios ni devoluciones.</div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- PUNTOS DE ENTREGA -->
     <div class="puntos-entrega">
       <h2>📍 Puntos de Entrega</h2>
       <p class="subtitulo">Coordinamos hora por WhatsApp | <b>Envío S/4.00</b></p>
       <div class="puntos-grid">
-        <div class="punto">
-          <span class="emoji">🏛️</span>
-          <div>
-            <b>Plaza de Armas de Ica</b><br>
-            <span class="badge-envio">ENVÍO S/4.00</span>
-          </div>
-        </div>
-        <div class="punto">
-          <span class="emoji">⚓</span>
-          <div>
-            <b>Plaza Miguel Grau - Parcona</b><br>
-            <span class="badge-envio">ENVÍO S/4.00</span>
-          </div>
-        </div>
-        <div class="punto">
-          <span class="emoji">🛒</span>
-          <div>
-            <b>Precio Uno - La Tinguiña</b><br>
-            <span class="badge-envio">ENVÍO S/4.00</span>
-          </div>
-        </div>
-        <div class="punto">
-          <span class="emoji">⛲</span>
-          <div>
-            <b>Plazuela de Los Aquijes</b><br>
-            <span class="badge-envio">ENVÍO S/4.00</span>
-          </div>
-        </div>
+        <div class="punto"><span>🏛️</span><div><b>Plaza de Armas de Ica</b><br><span class="badge-envio">ENVÍO S/4.00</span></div></div>
+        <div class="punto"><span>⚓</span><div><b>Plaza Miguel Grau - Parcona</b><br><span class="badge-envio">ENVÍO S/4.00</span></div></div>
+        <div class="punto"><span>🛒</span><div><b>Precio Uno - La Tinguiña</b><br><span class="badge-envio">ENVÍO S/4.00</span></div></div>
+        <div class="punto"><span>⛲</span><div><b>Plazuela de Los Aquijes</b><br><span class="badge-envio">ENVÍO S/4.00</span></div></div>
       </div>
     </div>
 
@@ -136,6 +177,8 @@
             <option value="12 Chocotejas Clasicas S/15.00">12 Chocotejas Clásicas - S/15.00</option>
             <option value="6 Chocotejas con Chinchin S/8.50">6 Chocotejas con Chinchín - S/8.50</option>
             <option value="12 Chocotejas con Chinchin S/15.50">12 Chocotejas con Chinchín - S/15.50</option>
+            <option value="Combo Familiar 12 Clasicas + 6 Chinchin S/22.00">Combo Familiar 12 Clásicas + 6 Chinchín - S/22.00</option>
+            <option value="Combo Dulce 24 Clasicas S/28.00">Combo Dulce 24 Clásicas - S/28.00</option>
             <option value="Otras cantidades - Consultar por WhatsApp">Otras cantidades - Consultar por WhatsApp</option>
           </select>
         </div>
@@ -174,21 +217,9 @@
       </form>
     </div>
 
-    <div class="beneficios">
-      <div class="beneficio"><div class="icono">🍫</div><h4>100% Artesanal</h4><p>Hechas a mano con amor.</p></div>
-      <div class="beneficio"><div class="icono">⚡</div><h4>Entrega Rápida</h4><p>Mismo día en Ica.</p></div>
-      <div class="beneficio"><div class="icono">❤️</div><h4>Ingredientes Premium</h4><p>La mejor calidad.</p></div>
-    </div>
-
-    <div class="info-box">
-      <h2>🕐 Horario de Atención</h2>
-      <p><b>Lunes a Domingo:</b> 9:00am - 8:00pm</p>
-      <p><b>💳 Pagos:</b> Yape, Plin y Efectivo</p>
-    </div>
-
   </div>
 
-  <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20consultar%20por%20otras%20cantidades%20de%20chocotejas" target="_blank" class="btn-whatsapp-float">📱 WhatsApp</a>
+  <a href="https://wa.me/51916518153" target="_blank" class="btn-whatsapp-float">📱 WhatsApp</a>
 
   <footer>
     <p>🍫 <b>Dulce Zoe</b> - Chocotejas Artesanales</p>
@@ -198,15 +229,12 @@
   <script>
     document.getElementById('formPedido').addEventListener('submit', function(e) {
       e.preventDefault();
-      
       let producto = document.getElementById('producto').value;
       let tipoEntrega = document.getElementById('tipoEntrega').value;
       let puntoFijo = document.getElementById('puntoFijo').value;
       let direccion = document.getElementById('direccion').value;
       let datos = document.getElementById('datos').value;
-      
       let mensaje = `Hola Dulce Zoe 🍫%0A%0A*PEDIDO*%0AProducto: ${producto}%0ATipo de Entrega: ${tipoEntrega}%0APunto de Recojo: ${puntoFijo}%0ADirección Delivery: ${direccion}%0ADatos: ${datos}%0A%0AQuedo atento para coordinar hora y pago ❤️`;
-      
       let url = `https://wa.me/51916518153?text=${mensaje}`;
       window.open(url, '_blank');
     });
