@@ -7,57 +7,67 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
     body { background: #fff8f0; color: #4a2c2a; }
-    
-    .banner-urgente { background: #ff0000; color: white; text-align: center; padding: 10px; font-weight: bold; }
-    .banner-envio { background: #d2691e; color: white; text-align: center; padding: 12px; font-weight: bold; }
-    
+
+  .banner-urgente { background: #ff0000; color: white; text-align: center; padding: 10px; font-weight: bold; }
+  .banner-envio { background: #d2691e; color: white; text-align: center; padding: 12px; font-weight: bold; }
+
     header { background: linear-gradient(135deg, #8b4513, #d2691e); color: white; text-align: center; padding: 50px 20px; }
     header h1 { font-size: 3em; margin-bottom: 10px; }
-    
-    .container { max-width: 1200px; margin: auto; padding: 40px 20px; }
-    
-    .productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-    .card { background: white; border-radius: 20px; box-shadow: 0 5px 20px rgba(139,69,19,0.15); overflow: hidden; }
-    .card img { width: 100%; height: 240px; object-fit: cover; }
-    .card-content { padding: 20px; }
-    .card-content h3 { color: #8b4513; font-size: 1.4em; margin-bottom: 8px; }
-    .precio-box { background: #fff0e0; padding: 10px 12px; border-radius: 12px; margin: 8px 0; }
-    .precio { display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1em; }
-    
-    .combos { background: linear-gradient(135deg, #8b4513, #d2691e); padding: 40px 30px; border-radius: 20px; margin: 50px 0; color: white; }
-    .combo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .combo-card { background: white; color: #4a2c2a; padding: 25px; border-radius: 15px; text-align: center; position: relative; }
-    .badge-ahorro { position: absolute; top: -10px; right: -10px; background: #ff0000; color: white; padding: 8px 15px; border-radius: 20px; font-weight: bold; }
-    .combo-precio { font-size: 2.2em; color: #25D366; font-weight: bold; margin: 10px 0; }
-    .btn-pedir { background: #25D366; color: white; padding: 12px; border-radius: 12px; text-decoration: none; display: block; text-align: center; margin-top: 10px; font-weight: bold; }
-    
-    .aclaraciones { background: #fff3cd; border: 3px solid #ffc107; padding: 30px; border-radius: 20px; margin: 40px 0; }
-    .aclaraciones h2 { color: #856404; text-align: center; margin-bottom: 20px; }
-    .aclaraciones li { background: white; padding: 15px; margin-bottom: 12px; border-radius: 10px; border-left: 5px solid #ffc107; }
-    .destacado { background: #ffebee; border-left: 5px solid #ff0000 !important; }
-    
-    .formulario-pedido { background: white; padding: 30px; border-radius: 20px; margin: 50px 0; }
-    .formulario-pedido h2 { color: #8b4513; text-align: center; margin-bottom: 10px; }
-    .alerta-form { text-align:center; margin-bottom:15px; color:#c62828; font-weight:bold; }
-    .form-group { margin-bottom: 15px; }
-    .form-group label { display: block; font-weight: bold; margin-bottom: 5px; color: #8b4513; }
-    .form-group input, .form-group select { width: 100%; padding: 12px; border: 2px solid #fff0e0; border-radius: 10px; font-size: 1em; }
-    
-    /* COSTO ENVIO */
-    .costo-envio-box { background: #e8f5e9; border: 2px solid #25D366; padding: 15px; border-radius: 12px; margin: 15px 0; text-align: center; display: none; }
-    .costo-envio-box.activo { display: block; }
-    .costo-envio { font-size: 1.8em; color: #25D366; font-weight: bold; }
-    
-    .mapa-box { background: #fff0e0; padding: 15px; border-radius: 12px; margin-top: 10px; border: 2px dashed #d2691e; }
-    .mapa-box iframe { width: 100%; height: 250px; border: none; border-radius: 10px; }
-    .btn-mapa { background: #4285F4; color: white; padding: 10px; border-radius: 8px; text-decoration: none; display: block; text-align: center; margin-top: 10px; font-weight: bold; }
-    
-    .campo-oculto { display: none; }
-    .campo-oculto.activo { display: block; animation: fadeIn 0.3s; }
+
+  .container { max-width: 1200px; margin: auto; padding: 40px 20px; }
+
+  .productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+  .card { background: white; border-radius: 20px; box-shadow: 0 5px 20px rgba(139,69,19,0.15); overflow: hidden; }
+  .card img { width: 100%; height: 240px; object-fit: cover; }
+  .card-content { padding: 20px; }
+  .card-content h3 { color: #8b4513; font-size: 1.4em; margin-bottom: 8px; }
+  .precio-box { background: #fff0e0; padding: 10px 12px; border-radius: 12px; margin: 8px 0; }
+  .precio { display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1em; }
+
+  .combos { background: linear-gradient(135deg, #8b4513, #d2691e); padding: 40px 30px; border-radius: 20px; margin: 50px 0; color: white; }
+  .combo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .combo-card { background: white; color: #4a2c2a; padding: 25px; border-radius: 15px; text-align: center; position: relative; }
+  .badge-ahorro { position: absolute; top: -10px; right: -10px; background: #ff0000; color: white; padding: 8px 15px; border-radius: 20px; font-weight: bold; }
+  .combo-precio { font-size: 2.2em; color: #25D366; font-weight: bold; margin: 10px 0; }
+
+  .formulario-pedido { background: white; padding: 30px; border-radius: 20px; margin: 50px 0; }
+  .formulario-pedido h2 { color: #8b4513; text-align: center; margin-bottom: 10px; }
+  .alerta-form { text-align:center; margin-bottom:15px; color:#c62828; font-weight:bold; }
+  .form-group { margin-bottom: 15px; }
+  .form-group label { display: block; font-weight: bold; margin-bottom: 5px; color: #8b4513; }
+  .form-group input,.form-group select { width: 100%; padding: 12px; border: 2px solid #fff0e0; border-radius: 10px; font-size: 1em; }
+
+    /* PAGO YAYPE */
+  .pago-box { background: #f3e5f5; border: 3px solid #7b1fa2; padding: 20px; border-radius: 15px; margin: 20px 0; }
+  .pago-box h3 { color: #7b1fa2; text-align: center; margin-bottom: 15px; }
+  .yape-info { background: white; padding: 20px; border-radius: 12px; text-align: center; }
+  .yape-numero { background: #7b1fa2; color: white; padding: 18px; border-radius: 12px; font-size: 1.8em; font-weight: bold; margin: 10px 0; letter-spacing: 2px; }
+  .yape-nombre { font-size: 1.2em; color: #4a2c2a; font-weight: bold; margin-bottom: 10px; }
+  .btn-copiar { background: #7b1fa2; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+  .btn-copiar:hover { background: #6a1b9a; }
+
+  .upload-box { border: 2px dashed #7b1fa2; padding: 20px; border-radius: 12px; text-align: center; background: white; cursor: pointer; margin-top: 15px; }
+  .upload-box:hover { background: #f3e5f5; }
+  .preview-img { max-width: 100%; margin-top: 10px; border-radius: 10px; display: none; border: 2px solid #7b1fa2; }
+
+  .resumen-box { background: #e8f5e9; border: 2px solid #25D366; padding: 15px; border-radius: 12px; margin: 15px 0; }
+  .resumen-linea { display: flex; justify-content: space-between; margin: 8px 0; font-size: 1.1em; }
+  .resumen-total { font-size: 1.4em; font-weight: bold; color: #25D366; border-top: 2px solid #25D366; padding-top: 10px; }
+
+  .costo-envio-box { background: #e8f5e9; border: 2px solid #25D366; padding: 15px; border-radius: 12px; margin: 15px 0; text-align: center; display: none; }
+  .costo-envio-box.activo { display: block; }
+  .costo-envio { font-size: 1.8em; color: #25D366; font-weight: bold; }
+
+  .mapa-box { background: #fff0e0; padding: 15px; border-radius: 12px; margin-top: 10px; border: 2px dashed #d2691e; }
+  .mapa-box iframe { width: 100%; height: 250px; border: none; border-radius: 10px; }
+  .btn-mapa { background: #4285F4; color: white; padding: 10px; border-radius: 8px; text-decoration: none; display: block; text-align: center; margin-top: 10px; font-weight: bold; }
+
+  .campo-oculto { display: none; }
+  .campo-oculto.activo { display: block; animation: fadeIn 0.3s; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-    
-    .btn-enviar { background: #25D366; color: white; padding: 15px; border: none; border-radius: 12px; width: 100%; font-size: 1.1em; font-weight: bold; cursor: pointer; }
-    .btn-whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white; padding: 16px 22px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 999; }
+
+  .btn-enviar { background: #25D366; color: white; padding: 15px; border: none; border-radius: 12px; width: 100%; font-size: 1.1em; font-weight: bold; cursor: pointer; }
+  .btn-whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white; padding: 16px 22px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 999; }
     footer { background: #4a2c2a; color: white; text-align: center; padding: 30px 20px; }
   </style>
 </head>
@@ -72,7 +82,7 @@
   </header>
 
   <div class="container">
-    
+
     <!-- PRODUCTOS -->
     <h2 style="text-align:center; margin-bottom:30px; color:#8b4513;">Nuestros 4 Sabores</h2>
     <div class="productos">
@@ -86,13 +96,13 @@
     <div class="combos">
       <h2>🎁 COMBOS AHORRA</h2>
       <div class="combo-grid">
-        <div class="combo-card"><div class="badge-ahorro">COMBO 1</div><h3>Combo Familiar</h3><p>12 Clásicas + 6 Chinchín</p><div class="combo-precio">S/ 30.00</div><a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20Combo%201%20S/30.00" target="_blank" class="btn-pedir">Pedir Combo 1</a></div>
-        <div class="combo-card"><div class="badge-ahorro">COMBO 2</div><h3>Combo Mix Premium</h3><p>6 de cada sabor</p><div class="combo-precio">S/ 48.00</div><a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20Combo%202%20S/48.00" target="_blank" class="btn-pedir">Pedir Combo 2</a></div>
-        <div class="combo-card"><div class="badge-ahorro">COMBO 3</div><h3>Combo Dulce</h3><p>24 Clásicas</p><div class="combo-precio">S/ 37.00</div><a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20Combo%203%20S/37.00" target="_blank" class="btn-pedir">Pedir Combo 3</a></div>
+        <div class="combo-card"><div class="badge-ahorro">COMBO 1</div><h3>Combo Familiar</h3><p>12 Clásicas + 6 Chinchín</p><div class="combo-precio">S/ 30.00</div></div>
+        <div class="combo-card"><div class="badge-ahorro">COMBO 2</div><h3>Combo Mix Premium</h3><p>6 de cada sabor</p><div class="combo-precio">S/ 48.00</div></div>
+        <div class="combo-card"><div class="badge-ahorro">COMBO 3</div><h3>Combo Dulce</h3><p>24 Clásicas</p><div class="combo-precio">S/ 37.00</div></div>
       </div>
     </div>
 
-    <!-- FORMULARIO -->
+    <!-- FORMULARIO CON PAGO -->
     <div class="formulario-pedido">
       <h2>📱 Haz tu pedido</h2>
       <p class="alerta-form">Recuerda: 1 día anticipación + 50% adelanto</p>
@@ -101,20 +111,20 @@
           <label>¿Qué deseas pedir?</label>
           <select id="producto" required>
             <option value="">Selecciona</option>
-            <option value="6 Clasicas S/10.00">6 Clásicas - S/10.00</option>
-            <option value="12 Clasicas S/19.00">12 Clásicas - S/19.00</option>
-            <option value="6 Chinchin S/12.00">6 Chinchín - S/12.00</option>
-            <option value="12 Chinchin S/20.00">12 Chinchín - S/20.00</option>
-            <option value="6 Gomitas S/12.00">6 Gomitas - S/12.00</option>
-            <option value="12 Gomitas S/21.00">12 Gomitas - S/21.00</option>
-            <option value="6 Oreo S/14.00">6 Oreo - S/14.00</option>
-            <option value="12 Oreo S/23.00">12 Oreo - S/23.00</option>
-            <option value="Combo 1 Familiar S/30.00">Combo 1 Familiar S/30.00</option>
-            <option value="Combo 2 Mix Premium S/48.00">Combo 2 Mix Premium S/48.00</option>
-            <option value="Combo 3 Dulce S/37.00">Combo 3 Dulce S/37.00</option>
+            <option value="6 Clasicas" data-precio="10">6 Clásicas - S/10.00</option>
+            <option value="12 Clasicas" data-precio="19">12 Clásicas - S/19.00</option>
+            <option value="6 Chinchin" data-precio="12">6 Chinchín - S/12.00</option>
+            <option value="12 Chinchin" data-precio="20">12 Chinchín - S/20.00</option>
+            <option value="6 Gomitas" data-precio="12">6 Gomitas - S/12.00</option>
+            <option value="12 Gomitas" data-precio="21">12 Gomitas - S/21.00</option>
+            <option value="6 Oreo" data-precio="14">6 Oreo - S/14.00</option>
+            <option value="12 Oreo" data-precio="23">12 Oreo - S/23.00</option>
+            <option value="Combo 1 Familiar" data-precio="30">Combo 1 Familiar S/30.00</option>
+            <option value="Combo 2 Mix Premium" data-precio="48">Combo 2 Mix Premium S/48.00</option>
+            <option value="Combo 3 Dulce" data-precio="37">Combo 3 Dulce S/37.00</option>
           </select>
         </div>
-        
+
         <div class="form-group">
           <label>Fecha para la que deseas tu pedido</label>
           <input type="date" id="fecha" required>
@@ -124,16 +134,15 @@
           <label>¿Cómo deseas recibirlo?</label>
           <select id="tipoEntrega" required>
             <option value="">Selecciona</option>
-            <option value="Recojo en Punto Fijo S/4.00">Recojo en Punto Fijo - S/4.00</option>
+            <option value="Recojo en Punto Fijo" data-costo="4">Recojo en Punto Fijo - S/4.00</option>
             <option value="Delivery a Domicilio">Delivery a Domicilio</option>
           </select>
         </div>
 
-        <!-- CAMPOS DELIVERY -->
         <div id="camposDelivery" class="campo-oculto">
           <div class="form-group">
             <label>Distrito 📍</label>
-            <select id="distrito" required>
+            <select id="distrito">
               <option value="">Selecciona tu distrito</option>
               <option value="Los Aquijes" data-costo="4">Los Aquijes - S/4.00</option>
               <option value="Ica" data-costo="5">Ica Centro - S/5.00</option>
@@ -141,33 +150,48 @@
               <option value="Parcona" data-costo="6">Parcona - S/6.00</option>
               <option value="Subtanjalla" data-costo="7">Subtanjalla - S/7.00</option>
               <option value="San Juan Bautista" data-costo="7">San Juan Bautista - S/7.00</option>
-              <option value="Salas" data-costo="8">Salas - S/8.00</option>
-              <option value="Pueblo Nuevo" data-costo="8">Pueblo Nuevo - S/8.00</option>
             </select>
           </div>
-
-          <!-- COSTO AUTOMATICO -->
           <div id="costoEnvioBox" class="costo-envio-box">
             <p>Costo de Delivery:</p>
             <div class="costo-envio" id="costoEnvio">S/ 0.00</div>
           </div>
-
-          <div class="form-group">
-            <label>Dirección Exacta 🏠</label>
-            <input type="text" id="direccion" placeholder="Ej: Av. San Martin 123">
-          </div>
-          <div class="form-group">
-            <label>Referencia ⭐</label>
-            <input type="text" id="referencia" placeholder="Ej: Frente al colegio, casa azul">
-          </div>
-
+          <div class="form-group"><label>Dirección Exacta 🏠</label><input type="text" id="direccion"></div>
+          <div class="form-group"><label>Referencia ⭐</label><input type="text" id="referencia"></div>
           <div class="mapa-box">
             <label><b>Ubicación en Mapa 🗺️</b></label>
-            <p style="font-size:0.9em; margin-bottom:10px;">1. Abre Google Maps > Busca tu dirección<br>2. "Compartir" > "Copiar enlace"<br>3. Pégalo aquí</p>
             <input type="text" id="linkMapa" placeholder="Pega aquí el link de Google Maps">
             <a href="https://maps.google.com" target="_blank" class="btn-mapa">📍 Abrir Google Maps</a>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122837.5!2d-75.768!3d-14.067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9110e2f3b8a1b8b1%3A0x1a1a1a1a1a1a1a1a!2sYaurilla%2C%20Los%20Aquijes%2C%20Ica!5e0!3m2!1ses!2spe!4v1" allowfullscreen="" loading="lazy"></iframe>
           </div>
+        </div>
+
+        <!-- SECCION PAGO YAYPE ACTUALIZADA -->
+        <div class="pago-box">
+          <h3>💜 Paso 1: Yapea el 50% de adelanto</h3>
+          <div class="yape-info">
+            <p><b>Yapea al número:</b></p>
+            <div class="yape-numero" id="numeroYape">931 442 393</div>
+            <div class="yape-nombre">Jheraldine Romina De La Cruz Limascca</div>
+            <button type="button" class="btn-copiar" onclick="copiarNumero()">📋 Copiar Número</button>
+            <p style="font-size:0.9em; color:#666; margin-top:10px;">*Paga solo el 50% del total. El saldo al entregar*</p>
+          </div>
+
+          <h3 style="margin-top:20px;">💜 Paso 2: Sube tu comprobante</h3>
+          <div class="upload-box" onclick="document.getElementById('comprobante').click()">
+            <p>📸 Click aquí para subir foto de tu pago Yape</p>
+            <input type="file" id="comprobante" accept="image/*" style="display:none;" required>
+            <img id="preview" class="preview-img">
+          </div>
+        </div>
+
+        <!-- RESUMEN -->
+        <div class="resumen-box">
+          <h3 style="color:#25D366; margin-bottom:10px;">🧾 Resumen de Pago</h3>
+          <div class="resumen-linea"><span>Subtotal:</span><span id="subtotal">S/ 0.00</span></div>
+          <div class="resumen-linea"><span>Delivery:</span><span id="delivery">S/ 0.00</span></div>
+          <div class="resumen-linea resumen-total"><span>Total:</span><span id="total">S/ 0.00</span></div>
+          <div class="resumen-linea" style="color:#7b1fa2;"><span>Adelanto 50%:</span><span id="adelanto">S/ 0.00</span></div>
         </div>
 
         <div class="form-group">
@@ -189,56 +213,88 @@
   </footer>
 
   <script>
-    const tipoEntrega = document.getElementById('tipoEntrega');
-    const camposDelivery = document.getElementById('camposDelivery');
-    const distrito = document.getElementById('distrito');
-    const costoEnvioBox = document.getElementById('costoEnvioBox');
-    const costoEnvio = document.getElementById('costoEnvio');
-    
-    // MOSTRAR CAMPOS Y CALCULAR COSTO
-    tipoEntrega.addEventListener('change', function() {
+    let precioProducto = 0;
+    let costoDelivery = 0;
+
+    // COPIAR NUMERO
+    function copiarNumero() {
+      navigator.clipboard.writeText('931442393');
+      alert('Número copiado: 931 442 393');
+    }
+
+    // CALCULAR PRECIOS
+    document.getElementById('producto').addEventListener('change', calcularTotal);
+    document.getElementById('distrito').addEventListener('change', calcularTotal);
+    document.getElementById('tipoEntrega').addEventListener('change', function() {
       if(this.value === 'Delivery a Domicilio') {
-        camposDelivery.classList.add('activo');
-        distrito.required = true;
+        document.getElementById('camposDelivery').classList.add('activo');
       } else {
-        camposDelivery.classList.remove('activo');
-        costoEnvioBox.classList.remove('activo');
-        distrito.required = false;
+        document.getElementById('camposDelivery').classList.remove('activo');
+        costoDelivery = 4;
       }
+      calcularTotal();
     });
 
-    distrito.addEventListener('change', function() {
-      if(this.value) {
-        let costo = this.options[this.selectedIndex].getAttribute('data-costo');
-        costoEnvio.textContent = `S/ ${costo}.00`;
-        costoEnvioBox.classList.add('activo');
-      } else {
-        costoEnvioBox.classList.remove('activo');
+    function calcularTotal() {
+      precioProducto = parseFloat(document.getElementById('producto').selectedOptions[0]?.getAttribute('data-precio') || 0);
+      costoDelivery = parseFloat(document.getElementById('distrito').selectedOptions[0]?.getAttribute('data-costo') ||
+                       document.getElementById('tipoEntrega').selectedOptions[0]?.getAttribute('data-costo') || 0);
+
+      let subtotal = precioProducto;
+      let total = subtotal + costoDelivery;
+      let adelanto = total / 2;
+
+      document.getElementById('subtotal').textContent = `S/ ${subtotal.toFixed(2)}`;
+      document.getElementById('delivery').textContent = `S/ ${costoDelivery.toFixed(2)}`;
+      document.getElementById('total').textContent = `S/ ${total.toFixed(2)}`;
+      document.getElementById('adelanto').textContent = `S/ ${adelanto.toFixed(2)}`;
+
+      if(costoDelivery > 0) document.getElementById('costoEnvioBox').classList.add('activo');
+    }
+
+    // PREVIEW IMAGEN
+    document.getElementById('comprobante').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if(file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          document.getElementById('preview').src = event.target.result;
+          document.getElementById('preview').style.display = 'block';
+        }
+        reader.readAsDataURL(file);
       }
     });
 
     // ENVIAR A WHATSAPP
     document.getElementById('formPedido').addEventListener('submit', function(e) {
       e.preventDefault();
+
+      if(!document.getElementById('comprobante').files[0]) {
+        alert('Por favor sube tu comprobante de pago');
+        return;
+      }
+
       let producto = document.getElementById('producto').value;
       let fecha = document.getElementById('fecha').value;
       let tipoEntrega = document.getElementById('tipoEntrega').value;
       let distritoVal = document.getElementById('distrito').value;
-      let costo = distrito.options[distrito.selectedIndex]?.getAttribute('data-costo') || '0';
       let direccion = document.getElementById('direccion').value;
       let referencia = document.getElementById('referencia').value;
       let linkMapa = document.getElementById('linkMapa').value;
       let datos = document.getElementById('datos').value;
-      
-      let mensaje = `Hola Dulce Zoe 🍫%0A%0A*PEDIDO*%0AProducto: ${producto}%0AFecha de Entrega: ${fecha}%0ATipo de Entrega: ${tipoEntrega}`;
-      
+      let total = document.getElementById('total').textContent;
+      let adelanto = document.getElementById('adelanto').textContent;
+
+      let mensaje = `Hola Dulce Zoe 🍫%0A%0A*PEDIDO NUEVO*%0AProducto: ${producto}%0AFecha: ${fecha}%0AEntrega: ${tipoEntrega}`;
+
       if(tipoEntrega === 'Delivery a Domicilio') {
-        mensaje += `%0A%0A*DATOS DE DELIVERY*%0ADistrito: ${distritoVal}%0ACosto Delivery: S/${costo}.00%0ADirección: ${direccion}%0AReferencia: ${referencia}%0AUbicación: ${linkMapa}`;
+        mensaje += `%0ADistrito: ${distritoVal}%0ADirección: ${direccion}%0AReferencia: ${referencia}%0AMapa: ${linkMapa}`;
       }
-      
-      mensaje += `%0A%0ADatos: ${datos}%0A%0A*Nota: Entiendo 1 día anticipación + 50% adelanto*%0AQuedo atento ❤️`;
-      
+
+      mensaje += `%0A%0A*PAGO YAYPE*%0ANombre: Jheraldine Romina De La Cruz Limascca%0ANúmero: 931 442 393%0ATotal: ${total}%0AAdelanto 50%: ${adelanto}%0AComprobante: [Foto adjunta]%0A%0ADatos: ${datos}`;
+
       window.open(`https://wa.me/51916518153?text=${mensaje}`, '_blank');
+      alert('¡Pedido enviado! Ahora envíame la foto de tu comprobante por WhatsApp para confirmarte ❤️');
     });
   </script>
 
