@@ -43,7 +43,11 @@
     .form-group label { display: block; font-weight: bold; margin-bottom: 5px; color: #8b4513; }
     .form-group input, .form-group select { width: 100%; padding: 12px; border: 2px solid #fff0e0; border-radius: 10px; font-size: 1em; }
     
-    /* CAMPOS OCULTOS */
+    /* MAPA */
+    .mapa-box { background: #fff0e0; padding: 15px; border-radius: 12px; margin-top: 10px; border: 2px dashed #d2691e; }
+    .mapa-box iframe { width: 100%; height: 250px; border: none; border-radius: 10px; }
+    .btn-mapa { background: #4285F4; color: white; padding: 10px; border-radius: 8px; text-decoration: none; display: block; text-align: center; margin-top: 10px; font-weight: bold; }
+    
     .campo-oculto { display: none; }
     .campo-oculto.activo { display: block; animation: fadeIn 0.3s; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
@@ -67,9 +71,8 @@
 
   <div class="container">
     
-    <!-- PRODUCTOS Y COMBOS IGUALES... -->
+    <!-- PRODUCTOS -->
     <h2 style="text-align:center; margin-bottom:30px; color:#8b4513;">Nuestros 4 Sabores</h2>
-    
     <div class="productos">
       <div class="card">
         <img src="https://files.evogb.win/9UDDPZ.jpg" alt="Chocotejas Clasicas">
@@ -79,7 +82,6 @@
           <div class="precio-box"><div class="precio"><span>📦 12 Unidades</span><span>S/ 19.00</span></div></div>
         </div>
       </div>
-
       <div class="card">
         <img src="https://files.evogb.win/Jp0isV.jpg" alt="Chocotejas con Chinchin">
         <div class="card-content">
@@ -88,7 +90,6 @@
           <div class="precio-box"><div class="precio"><span>📦 12 Unidades</span><span>S/ 20.00</span></div></div>
         </div>
       </div>
-
       <div class="card">
         <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500" alt="Chocotejas con Gomitas">
         <div class="card-content">
@@ -97,7 +98,6 @@
           <div class="precio-box"><div class="precio"><span>📦 12 Unidades</span><span>S/ 21.00</span></div></div>
         </div>
       </div>
-
       <div class="card">
         <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?w=500" alt="Chocotejas con Oreo">
         <div class="card-content">
@@ -112,31 +112,13 @@
     <div class="combos">
       <h2>🎁 COMBOS AHORRA</h2>
       <div class="combo-grid">
-        <div class="combo-card">
-          <div class="badge-ahorro">COMBO 1</div>
-          <h3>Combo Familiar</h3>
-          <p>12 Clásicas + 6 Chinchín</p>
-          <div class="combo-precio">S/ 30.00</div>
-          <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20Combo%201%20S/30.00" target="_blank" class="btn-pedir">Pedir Combo 1</a>
-        </div>
-        <div class="combo-card">
-          <div class="badge-ahorro">COMBO 2</div>
-          <h3>Combo Mix Premium</h3>
-          <p>6 de cada sabor</p>
-          <div class="combo-precio">S/ 48.00</div>
-          <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20Combo%202%20S/48.00" target="_blank" class="btn-pedir">Pedir Combo 2</a>
-        </div>
-        <div class="combo-card">
-          <div class="badge-ahorro">COMBO 3</div>
-          <h3>Combo Dulce</h3>
-          <p>24 Clásicas</p>
-          <div class="combo-precio">S/ 37.00</div>
-          <a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20Combo%203%20S/37.00" target="_blank" class="btn-pedir">Pedir Combo 3</a>
-        </div>
+        <div class="combo-card"><div class="badge-ahorro">COMBO 1</div><h3>Combo Familiar</h3><p>12 Clásicas + 6 Chinchín</p><div class="combo-precio">S/ 30.00</div><a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20Combo%201%20S/30.00" target="_blank" class="btn-pedir">Pedir Combo 1</a></div>
+        <div class="combo-card"><div class="badge-ahorro">COMBO 2</div><h3>Combo Mix Premium</h3><p>6 de cada sabor</p><div class="combo-precio">S/ 48.00</div><a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20Combo%202%20S/48.00" target="_blank" class="btn-pedir">Pedir Combo 2</a></div>
+        <div class="combo-card"><div class="badge-ahorro">COMBO 3</div><h3>Combo Dulce</h3><p>24 Clásicas</p><div class="combo-precio">S/ 37.00</div><a href="https://wa.me/51916518153?text=Hola%20Dulce%20Zoe%20%F0%9F%8D%AB%20Quiero%20Combo%203%20S/37.00" target="_blank" class="btn-pedir">Pedir Combo 3</a></div>
       </div>
     </div>
 
-    <!-- FORMULARIO CON CAMPOS CONDICIONALES -->
+    <!-- FORMULARIO CON MAPA -->
     <div class="formulario-pedido">
       <h2>📱 Haz tu pedido</h2>
       <p class="alerta-form">Recuerda: 1 día anticipación + 50% adelanto</p>
@@ -173,7 +155,7 @@
           </select>
         </div>
 
-        <!-- CAMPOS QUE APARECEN SOLO CON DELIVERY -->
+        <!-- CAMPOS DELIVERY + MAPA -->
         <div id="camposDelivery" class="campo-oculto">
           <div class="form-group">
             <label>Distrito 📍</label>
@@ -186,6 +168,16 @@
           <div class="form-group">
             <label>Referencia ⭐</label>
             <input type="text" id="referencia" placeholder="Ej: Frente al colegio, casa azul">
+          </div>
+
+          <div class="mapa-box">
+            <label><b>Ubicación en Mapa 🗺️</b></label>
+            <p style="font-size:0.9em; margin-bottom:10px;">1. Abre Google Maps y busca tu dirección<br>2. Toca "Compartir" > "Copiar enlace"<br>3. Pégalo aquí abajo</p>
+            <input type="text" id="linkMapa" placeholder="Pega aquí el link de Google Maps">
+            <a href="https://maps.google.com" target="_blank" class="btn-mapa">📍 Abrir Google Maps</a>
+            
+            <!-- Mapa de Ica de referencia -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122837.5!2d-75.768!3d-14.067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9110e2f3b8a1b8b1%3A0x1a1a1a1a1a1a1a1a!2sIca%2C%20Peru!5e0!3m2!1ses!2spe!4v1" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
 
@@ -208,7 +200,6 @@
   </footer>
 
   <script>
-    // MOSTRAR/OCULTAR CAMPOS DE DELIVERY
     const tipoEntrega = document.getElementById('tipoEntrega');
     const camposDelivery = document.getElementById('camposDelivery');
     
@@ -218,15 +209,16 @@
         document.getElementById('distrito').required = true;
         document.getElementById('direccion').required = true;
         document.getElementById('referencia').required = true;
+        document.getElementById('linkMapa').required = true;
       } else {
         camposDelivery.classList.remove('activo');
         document.getElementById('distrito').required = false;
         document.getElementById('direccion').required = false;
         document.getElementById('referencia').required = false;
+        document.getElementById('linkMapa').required = false;
       }
     });
 
-    // ENVIAR A WHATSAPP
     document.getElementById('formPedido').addEventListener('submit', function(e) {
       e.preventDefault();
       let producto = document.getElementById('producto').value;
@@ -235,15 +227,16 @@
       let distrito = document.getElementById('distrito').value;
       let direccion = document.getElementById('direccion').value;
       let referencia = document.getElementById('referencia').value;
+      let linkMapa = document.getElementById('linkMapa').value;
       let datos = document.getElementById('datos').value;
       
       let mensaje = `Hola Dulce Zoe 🍫%0A%0A*PEDIDO*%0AProducto: ${producto}%0AFecha de Entrega: ${fecha}%0ATipo de Entrega: ${tipoEntrega}`;
       
       if(tipoEntrega === 'Delivery a Domicilio') {
-        mensaje += `%0A*DATOS DE DELIVERY*%0ADistrito: ${distrito}%0ADirección: ${direccion}%0AReferencia: ${referencia}`;
+        mensaje += `%0A%0A*DATOS DE DELIVERY*%0ADistrito: ${distrito}%0ADirección: ${direccion}%0AReferencia: ${referencia}%0AUbicación: ${linkMapa}`;
       }
       
-      mensaje += `%0ADatos: ${datos}%0A%0A*Nota: Entiendo 1 día anticipación + 50% adelanto*%0AQuedo atento ❤️`;
+      mensaje += `%0A%0ADatos: ${datos}%0A%0A*Nota: Entiendo 1 día anticipación + 50% adelanto*%0AQuedo atento ❤️`;
       
       window.open(`https://wa.me/51916518153?text=${mensaje}`, '_blank');
     });
