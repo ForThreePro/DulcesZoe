@@ -30,6 +30,13 @@
    .form-group { margin-bottom: 15px; }
    .form-group label { display: block; font-weight: bold; margin-bottom: 5px; color: #8b4513; }
    .form-group input,.form-group select { width: 100%; padding: 12px; border: 2px solid #fff0e0; border-radius: 10px; font-size: 1em; }
+    
+    /* ACLARACIONES */
+   .aclaraciones-box { background: #fff3cd; border: 2px solid #ffc107; padding: 15px; border-radius: 12px; margin: 20px 0; }
+   .aclaraciones-box h4 { color: #856404; margin-bottom: 10px; }
+   .aclaraciones-box ul { margin-left: 20px; color: #856404; line-height: 1.6; }
+   .aclaraciones-box li { margin-bottom: 8px; }
+
     /* PAGO YAYPE */
    .pago-box { background: #f3e5f5; border: 3px solid #7b1fa2; padding: 20px; border-radius: 15px; margin: 20px 0; }
    .pago-box h3 { color: #7b1fa2; text-align: center; margin-bottom: 15px; font-size: 1.1em; }
@@ -88,6 +95,20 @@
     <div class="formulario-pedido">
       <h2>📱 Haz tu pedido</h2>
       <p class="alerta-form">Recuerda: 1 día anticipación + 50% adelanto</p>
+
+      <!-- ACLARACIONES NUEVAS -->
+      <div class="aclaraciones-box">
+        <h4>📌 Importante leer antes de pedir:</h4>
+        <ul>
+          <li><b>Pedidos:</b> Se aceptan con mínimo 24 horas de anticipación</li>
+          <li><b>Adelanto:</b> 50% para separar tu pedido. El otro 50% al entregar o recoger</li>
+          <li><b>Confirmación:</b> Tu pedido queda confirmado solo después de verificar tu yapeo</li>
+          <li><b>Horario de entrega:</b> 10:00 am a 7:00 pm</li>
+          <li><b>Cambios:</b> No se aceptan cambios ni devoluciones una vez confirmado el pedido</li>
+          <li><b>Recojo:</b> El costo de S/4.00 es por espera en punto. Máx 15 min de tolerancia</li>
+        </ul>
+      </div>
+
       <form id="formPedido">
         <div class="form-group">
           <label>¿Qué deseas pedir?</label>
@@ -210,7 +231,7 @@
 
   <footer>
     <p>🍫 <b>Dulce Zoe</b> - Yaurilla, Los Aquijes - Ica</p>
-    <p>WhatsApp: 916 518 153</p>
+    <p>WhatsApp: 916 518 153 | Horario: 9am - 8pm</p>
   </footer>
 
   <script>
@@ -222,7 +243,6 @@
       alert('Número copiado: 931 442 393');
     }
 
-    // MOSTRAR CAMPOS SEGUN TIPO DE ENTREGA
     document.getElementById('tipoEntrega').addEventListener('change', function() {
       const camposRecojo = document.getElementById('camposRecojo');
       const camposDelivery = document.getElementById('camposDelivery');
@@ -242,7 +262,6 @@
       calcularTotal();
     });
 
-    // CALCULAR COSTO CUANDO CAMBIA DISTRITO
     document.getElementById('distrito').addEventListener('change', function() {
       let costo = this.options[this.selectedIndex].getAttribute('data-costo');
       costoDelivery = parseFloat(costo) || 0;
@@ -251,7 +270,6 @@
       calcularTotal();
     });
 
-    // CALCULAR PRECIOS
     document.getElementById('producto').addEventListener('change', calcularTotal);
 
     function calcularTotal() {
@@ -267,7 +285,6 @@
       document.getElementById('adelanto').textContent = `S/ ${adelanto.toFixed(2)}`;
     }
 
-    // ENVIAR A WHATSAPP
     document.getElementById('formPedido').addEventListener('submit', function(e) {
       e.preventDefault();
 
