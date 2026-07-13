@@ -43,7 +43,11 @@
     .form-group label { display: block; font-weight: bold; margin-bottom: 5px; color: #8b4513; }
     .form-group input, .form-group select { width: 100%; padding: 12px; border: 2px solid #fff0e0; border-radius: 10px; font-size: 1em; }
     
-    /* MAPA */
+    /* COSTO ENVIO */
+    .costo-envio-box { background: #e8f5e9; border: 2px solid #25D366; padding: 15px; border-radius: 12px; margin: 15px 0; text-align: center; display: none; }
+    .costo-envio-box.activo { display: block; }
+    .costo-envio { font-size: 1.8em; color: #25D366; font-weight: bold; }
+    
     .mapa-box { background: #fff0e0; padding: 15px; border-radius: 12px; margin-top: 10px; border: 2px dashed #d2691e; }
     .mapa-box iframe { width: 100%; height: 250px; border: none; border-radius: 10px; }
     .btn-mapa { background: #4285F4; color: white; padding: 10px; border-radius: 8px; text-decoration: none; display: block; text-align: center; margin-top: 10px; font-weight: bold; }
@@ -53,16 +57,14 @@
     @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
     
     .btn-enviar { background: #25D366; color: white; padding: 15px; border: none; border-radius: 12px; width: 100%; font-size: 1.1em; font-weight: bold; cursor: pointer; }
-    
     .btn-whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white; padding: 16px 22px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 999; }
-    
     footer { background: #4a2c2a; color: white; text-align: center; padding: 30px 20px; }
   </style>
 </head>
 <body>
 
   <div class="banner-urgente">⚠️ PEDIDOS CON 1 DÍA DE ANTICIPACIÓN + 50% DE ADELANTO</div>
-  <div class="banner-envio">🚚 Delivery según zona | 📍 Recojo en puntos: S/4.00 | 🍫 4 Sabores Premium</div>
+  <div class="banner-envio">📍 Base: Yaurilla - Los Aquijes | 🚚 Delivery con costo según zona</div>
 
   <header>
     <h1>🍫 Dulce Zoe</h1>
@@ -74,38 +76,10 @@
     <!-- PRODUCTOS -->
     <h2 style="text-align:center; margin-bottom:30px; color:#8b4513;">Nuestros 4 Sabores</h2>
     <div class="productos">
-      <div class="card">
-        <img src="https://files.evogb.win/9UDDPZ.jpg" alt="Chocotejas Clasicas">
-        <div class="card-content">
-          <h3>Chocotejas Clásicas</h3>
-          <div class="precio-box"><div class="precio"><span>📦 6 Unidades</span><span>S/ 10.00</span></div></div>
-          <div class="precio-box"><div class="precio"><span>📦 12 Unidades</span><span>S/ 19.00</span></div></div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://files.evogb.win/Jp0isV.jpg" alt="Chocotejas con Chinchin">
-        <div class="card-content">
-          <h3>Chocotejas con Chinchín</h3>
-          <div class="precio-box"><div class="precio"><span>📦 6 Unidades</span><span>S/ 12.00</span></div></div>
-          <div class="precio-box"><div class="precio"><span>📦 12 Unidades</span><span>S/ 20.00</span></div></div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500" alt="Chocotejas con Gomitas">
-        <div class="card-content">
-          <h3>Chocotejas con Gomitas 🍬</h3>
-          <div class="precio-box"><div class="precio"><span>📦 6 Unidades</span><span>S/ 12.00</span></div></div>
-          <div class="precio-box"><div class="precio"><span>📦 12 Unidades</span><span>S/ 21.00</span></div></div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?w=500" alt="Chocotejas con Oreo">
-        <div class="card-content">
-          <h3>Chocotejas con Oreo 🍪</h3>
-          <div class="precio-box"><div class="precio"><span>📦 6 Unidades</span><span>S/ 14.00</span></div></div>
-          <div class="precio-box"><div class="precio"><span>📦 12 Unidades</span><span>S/ 23.00</span></div></div>
-        </div>
-      </div>
+      <div class="card"><img src="https://files.evogb.win/9UDDPZ.jpg"><div class="card-content"><h3>Chocotejas Clásicas</h3><div class="precio-box"><div class="precio"><span>📦 6 Unidades</span><span>S/ 10.00</span></div></div><div class="precio-box"><div class="precio"><span>📦 12 Unidades</span><span>S/ 19.00</span></div></div></div></div>
+      <div class="card"><img src="https://files.evogb.win/Jp0isV.jpg"><div class="card-content"><h3>Chocotejas con Chinchín</h3><div class="precio-box"><div class="precio"><span>📦 6 Unidades</span><span>S/ 12.00</span></div></div><div class="precio-box"><div class="precio"><span>📦 12 Unidades</span><span>S/ 20.00</span></div></div></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500"><div class="card-content"><h3>Chocotejas con Gomitas 🍬</h3><div class="precio-box"><div class="precio"><span>📦 6 Unidades</span><span>S/ 12.00</span></div></div><div class="precio-box"><div class="precio"><span>📦 12 Unidades</span><span>S/ 21.00</span></div></div></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?w=500"><div class="card-content"><h3>Chocotejas con Oreo 🍪</h3><div class="precio-box"><div class="precio"><span>📦 6 Unidades</span><span>S/ 14.00</span></div></div><div class="precio-box"><div class="precio"><span>📦 12 Unidades</span><span>S/ 23.00</span></div></div></div></div>
     </div>
 
     <!-- COMBOS -->
@@ -118,7 +92,7 @@
       </div>
     </div>
 
-    <!-- FORMULARIO CON MAPA -->
+    <!-- FORMULARIO -->
     <div class="formulario-pedido">
       <h2>📱 Haz tu pedido</h2>
       <p class="alerta-form">Recuerda: 1 día anticipación + 50% adelanto</p>
@@ -155,12 +129,29 @@
           </select>
         </div>
 
-        <!-- CAMPOS DELIVERY + MAPA -->
+        <!-- CAMPOS DELIVERY -->
         <div id="camposDelivery" class="campo-oculto">
           <div class="form-group">
             <label>Distrito 📍</label>
-            <input type="text" id="distrito" placeholder="Ej: Ica, La Tinguiña, Parcona">
+            <select id="distrito" required>
+              <option value="">Selecciona tu distrito</option>
+              <option value="Los Aquijes" data-costo="4">Los Aquijes - S/4.00</option>
+              <option value="Ica" data-costo="5">Ica Centro - S/5.00</option>
+              <option value="La Tinguiña" data-costo="6">La Tinguiña - S/6.00</option>
+              <option value="Parcona" data-costo="6">Parcona - S/6.00</option>
+              <option value="Subtanjalla" data-costo="7">Subtanjalla - S/7.00</option>
+              <option value="San Juan Bautista" data-costo="7">San Juan Bautista - S/7.00</option>
+              <option value="Salas" data-costo="8">Salas - S/8.00</option>
+              <option value="Pueblo Nuevo" data-costo="8">Pueblo Nuevo - S/8.00</option>
+            </select>
           </div>
+
+          <!-- COSTO AUTOMATICO -->
+          <div id="costoEnvioBox" class="costo-envio-box">
+            <p>Costo de Delivery:</p>
+            <div class="costo-envio" id="costoEnvio">S/ 0.00</div>
+          </div>
+
           <div class="form-group">
             <label>Dirección Exacta 🏠</label>
             <input type="text" id="direccion" placeholder="Ej: Av. San Martin 123">
@@ -172,12 +163,10 @@
 
           <div class="mapa-box">
             <label><b>Ubicación en Mapa 🗺️</b></label>
-            <p style="font-size:0.9em; margin-bottom:10px;">1. Abre Google Maps y busca tu dirección<br>2. Toca "Compartir" > "Copiar enlace"<br>3. Pégalo aquí abajo</p>
+            <p style="font-size:0.9em; margin-bottom:10px;">1. Abre Google Maps > Busca tu dirección<br>2. "Compartir" > "Copiar enlace"<br>3. Pégalo aquí</p>
             <input type="text" id="linkMapa" placeholder="Pega aquí el link de Google Maps">
             <a href="https://maps.google.com" target="_blank" class="btn-mapa">📍 Abrir Google Maps</a>
-            
-            <!-- Mapa de Ica de referencia -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122837.5!2d-75.768!3d-14.067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9110e2f3b8a1b8b1%3A0x1a1a1a1a1a1a1a1a!2sIca%2C%20Peru!5e0!3m2!1ses!2spe!4v1" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122837.5!2d-75.768!3d-14.067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9110e2f3b8a1b8b1%3A0x1a1a1a1a1a1a1a1a!2sYaurilla%2C%20Los%20Aquijes%2C%20Ica!5e0!3m2!1ses!2spe!4v1" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
 
@@ -195,36 +184,47 @@
   <a href="https://wa.me/51916518153" target="_blank" class="btn-whatsapp-float">📱 WhatsApp</a>
 
   <footer>
-    <p>🍫 <b>Dulce Zoe</b> - Chocotejas Artesanales</p>
+    <p>🍫 <b>Dulce Zoe</b> - Yaurilla, Los Aquijes - Ica</p>
     <p>WhatsApp: 916 518 153</p>
   </footer>
 
   <script>
     const tipoEntrega = document.getElementById('tipoEntrega');
     const camposDelivery = document.getElementById('camposDelivery');
+    const distrito = document.getElementById('distrito');
+    const costoEnvioBox = document.getElementById('costoEnvioBox');
+    const costoEnvio = document.getElementById('costoEnvio');
     
+    // MOSTRAR CAMPOS Y CALCULAR COSTO
     tipoEntrega.addEventListener('change', function() {
       if(this.value === 'Delivery a Domicilio') {
         camposDelivery.classList.add('activo');
-        document.getElementById('distrito').required = true;
-        document.getElementById('direccion').required = true;
-        document.getElementById('referencia').required = true;
-        document.getElementById('linkMapa').required = true;
+        distrito.required = true;
       } else {
         camposDelivery.classList.remove('activo');
-        document.getElementById('distrito').required = false;
-        document.getElementById('direccion').required = false;
-        document.getElementById('referencia').required = false;
-        document.getElementById('linkMapa').required = false;
+        costoEnvioBox.classList.remove('activo');
+        distrito.required = false;
       }
     });
 
+    distrito.addEventListener('change', function() {
+      if(this.value) {
+        let costo = this.options[this.selectedIndex].getAttribute('data-costo');
+        costoEnvio.textContent = `S/ ${costo}.00`;
+        costoEnvioBox.classList.add('activo');
+      } else {
+        costoEnvioBox.classList.remove('activo');
+      }
+    });
+
+    // ENVIAR A WHATSAPP
     document.getElementById('formPedido').addEventListener('submit', function(e) {
       e.preventDefault();
       let producto = document.getElementById('producto').value;
       let fecha = document.getElementById('fecha').value;
       let tipoEntrega = document.getElementById('tipoEntrega').value;
-      let distrito = document.getElementById('distrito').value;
+      let distritoVal = document.getElementById('distrito').value;
+      let costo = distrito.options[distrito.selectedIndex]?.getAttribute('data-costo') || '0';
       let direccion = document.getElementById('direccion').value;
       let referencia = document.getElementById('referencia').value;
       let linkMapa = document.getElementById('linkMapa').value;
@@ -233,7 +233,7 @@
       let mensaje = `Hola Dulce Zoe 🍫%0A%0A*PEDIDO*%0AProducto: ${producto}%0AFecha de Entrega: ${fecha}%0ATipo de Entrega: ${tipoEntrega}`;
       
       if(tipoEntrega === 'Delivery a Domicilio') {
-        mensaje += `%0A%0A*DATOS DE DELIVERY*%0ADistrito: ${distrito}%0ADirección: ${direccion}%0AReferencia: ${referencia}%0AUbicación: ${linkMapa}`;
+        mensaje += `%0A%0A*DATOS DE DELIVERY*%0ADistrito: ${distritoVal}%0ACosto Delivery: S/${costo}.00%0ADirección: ${direccion}%0AReferencia: ${referencia}%0AUbicación: ${linkMapa}`;
       }
       
       mensaje += `%0A%0ADatos: ${datos}%0A%0A*Nota: Entiendo 1 día anticipación + 50% adelanto*%0AQuedo atento ❤️`;
